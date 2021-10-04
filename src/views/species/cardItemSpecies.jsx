@@ -1,10 +1,10 @@
 import React from 'react';
 import { Grid, Card, CardContent, Typography } from '@mui/material';
 
-export default function CardItem( {key, name, classification, designation, language, eye_colors, hair_colors, skin_colors, average_height, average_lifespan } ) {
+export default function CardItem( {url, name, classification, designation, language, eye_colors, hair_colors, skin_colors, average_height, average_lifespan } ) {
    
     return (
-    <Grid item xs={4} sm={4} key={key}>
+    <Grid item xs={4} sm={4} key={url}>
         <Card>
             <CardContent>
                 <Typography variant="h6" component="div">{name}</Typography>

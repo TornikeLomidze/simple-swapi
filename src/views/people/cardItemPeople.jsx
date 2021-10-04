@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-export default function CardItem({ key, name, birth_year, gender, height, mass, hair_color, skin_color, films, vehicles, starships }) {
+export default function CardItem({ url, name, birth_year, gender, height, mass, hair_color, skin_color, films, vehicles, starships }) {
 
   const [open, setOpen] = useState(false);
   const [filmeData, setFilmeData] = useState();
@@ -103,8 +103,8 @@ export default function CardItem({ key, name, birth_year, gender, height, mass, 
   const classes = useStyles();
 
   return (
-    <Grid item xs={4} sm={4} key={key}>
-      <Card onClick={() => { handleOpen(key) }}>
+    <Grid item xs={4} sm={4} key={url}>
+      <Card onClick={() => { handleOpen(url) }}>
         <CardContent>
           <Typography variant="h6" component="div">{name}</Typography>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom><b>Born:</b> {birth_year}</Typography>

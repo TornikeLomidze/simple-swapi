@@ -37,9 +37,10 @@ const GenericPage = ({url, CardItem}) => {
             </Grid>
 
             <Grid container spacing={3} direction="row" justifyContent="space-between" alignItems="flex-start" classes={{ root: "grid_container" }} >
-                {!isLoading && data ? data && data.map((item, index ) =>
+                {!isLoading && data ? data && data.map((item) =>
                     <CardItem
-                        key={index}
+                        key={item.url}
+                        url={item.url}
                         {...item}
                     />
                 ) : <Loading />
