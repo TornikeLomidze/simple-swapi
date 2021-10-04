@@ -1,0 +1,38 @@
+$white: white;
+$red: red;
+
+.header {
+    width: 100%;
+    padding: 1em 0;    
+    .nav{
+        &_item {
+            color: $white;
+            outline: none;
+            text-decoration: none;
+            margin: 20px 4px;
+            padding: 9px;
+            position: relative;
+            &.active,
+            &:hover {
+                color: $red;        
+            }
+        }
+    }
+}
+
+.search {
+    margin: 0 0 3em 0; 
+    &_bar {
+        width: 50%; 
+        div {
+            border: 1px solid $white;
+            border-radius: 30px;
+            color: $white;
+        }
+        #outlined-basic {
+            padding: 8px 12px;
+            cursor: auto;
+            outline: none;
+        }
+    }
+}
